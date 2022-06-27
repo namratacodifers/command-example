@@ -1,0 +1,110 @@
+creating DB and Storing value - 
+	echo "database name";
+	read dbnm
+	selectdb="use $dbnm;"
+	createdb="create database $dbnm;"
+	table="create table student (sid int, sname varchar(30));"
+	insert="insert into student(sid,sname) value(1, 'abc');"
+
+	mysql -u root -p -e "$createdb$selectdb$table$insert"
+	
+Cronjob server status
+	#!/bin/bash
+	status=$(service apache2 status)
+
+	if [[ $status == *"active (running)"* ]]; then
+	  echo "process is running"
+	else echo "process is not running"
+	fi
+	
+Commands -
+
+93  sosreport
+   94  cd /var/tmp
+   95  ls -l
+   96   yum install mysql180-community-release-el8-4noarch.rpm
+   97  wget https://repo.mysql.com/mysql80-community-release-el8-4.noarch.rpm
+   98  ls
+   99  yum localinstall mysql80-community-release-el8-4.noarch.rpm
+  100  dnf install mysql
+  101  yum repolist enabled | grep "mysql.*-community.*"
+  102  systemctl status mysld
+  103  systemctl status mysqld
+  104  yum install mysql-server
+  105  systemctl status mysqld
+  106  systemctl enable mysqld.service
+  108  systemctl start mysqld
+  109  systemctl status mysqld
+  110  mysql_secure_installation
+  111  touch sqlsript.sh
+  112  vi sqlscript.sh
+  113  cat sqlscript.sh
+  118  mysql -u root -p
+  119  vi sqlscript.sh
+  120  cat sqlscript.sh
+  121  sqlscript.sh
+  122  ./sqlscript.sh
+  123  chmod ./sqlscript.sh
+  124  mysql -u root -p
+  125  vi sqlscript.sh
+  126  mysql -uroot -p -e "$createdb$selectdb$table$insert"
+  127  mysql -u root -p -e "$createdb$selectdb$table$insert"
+  128  Nimmi@sql12
+  129  vi sqlscript.sh
+  130   sqlscript.sh
+  131  ./sqlscript.sh
+  132  chmod ./sqlscript.sh
+  133  chmod 777 sqlscript.sh
+  134  ./sqlscript.sh
+  135  vi sqlscript.sh
+  136  ./sqlscript.sh
+  137  vi sqlscript.sh
+  138  ./sqlscript.sh
+  139  mysql -u root -p
+  140  vi sqlscript.sh
+  141  mysql -u root -p
+  142  touch thirdscript.sh
+  143  vi thirdscript.sh
+  144  chmod 777 /thirdscript.sh
+  145  chmod 777 ./thirdscript.sh
+  146   ./thirdscript.sh
+  147  mysql -u root -p
+  148  vi thirdscript.sh
+  149  ./thirdscript.sh
+  150  vi thirdscript.sh
+  151  ./thirdscript.sh
+  152  mysql -u root -p
+  153  vi thirdscript.sh
+  154  ./thirdscript.sh
+  155  mysql -u root -p
+  156  Nimmi@sql12
+  157  mysql -u root -p
+  158  mysql - u root -p $pass -e "LOAD DATA LOCAL INFILE './abc.csv' into table admin.student FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' INGORE 1 ROWS";
+  159  cat /etc/nsswitch.conf
+  160  cat /etc/hostname
+  161  cat /etc/sysconfig
+  162* cat /etc/s
+  163  cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  164  cat /etc/resolv.conf
+  165  history
+   50  chmod 777 testfile.txt
+   51  ls -la
+   52  chmod 700 testfile.txt
+   53  ls -la
+   54  chmod g=x testfile.txt
+   55  ls -la
+   56  chmod og= testfile.txt
+   57  ls -la
+   58  chmod u=rw,g=r,o= testfile.txt
+   59  ls -la
+   60  history
+   63  adduser jerry
+   64  groupadd jenkins
+
+   66  usermod -G jenkins jerry
+   67  cat /etc/group
+
+   69  groupadd docker
+   70  usermod -G jenkins,docker jerry
+   71  cat /etc/group
+   72  gpasswd -d jerry docker
